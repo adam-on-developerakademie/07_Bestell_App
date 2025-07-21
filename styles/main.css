@@ -1,8 +1,49 @@
 main {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 400px;
+
+}
+
+.mainBackground {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
     background-position: center;
     background-image: url(../assets/img/baked.jpg);
     background-size: cover;
+
+}
+
+#mainHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-top: 17vh;
+    height: 8vh;
+    width: 100%;
+    background-color: white;
+}
+
+#menus {
+    height: 3vh;
+    width: 100%;
+    background-color: mediumorchid;
+}
+
+#products {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 100%;
+    border: 2ps solid black;
+}
+
+.myProduct {
+
+    height: 150px;
+    width: 100%;
+    border: 2ps solid black;
+    background-color: aqua;
 }

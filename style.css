@@ -16,29 +16,30 @@ header {
 
 .myBody {
     display: flex;
-    max-width: 1000px;
+    max-width: 1920px;
     justify-content: center;
     width: 100%;
+    height: 90vh;
 }
 
 .header {
-    max-width: 1000px;
+    max-width: 1920px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    height: 5vh;
 }
 
 #headerImage {
-    width: 150px;
+    height: 4vh;
     margin-left: 20px;
 }
 
 .myHtmlHamburger {
     margin-right: 20px;
-    height: 35px;
-    width: 35px;
+    height: 70%;
+    width: 4dvh;
     margin-left: auto;
     border: 5px solid transparent;
     border-radius: 5px;
@@ -54,4 +55,13 @@ header {
     background-color: whitesmoke;
     border: 1px solid transparent;
     border-radius: 10%;
+}
+
+footer{
+    background-color: #ff8000;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
