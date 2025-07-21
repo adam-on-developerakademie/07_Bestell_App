@@ -1,0 +1,20 @@
+body{
+
+    margin: 0;
+    
+}
+header{
+    background-color: orange;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+#headerImage{
+    height: 50px;
+
+
+}
+
+
+
