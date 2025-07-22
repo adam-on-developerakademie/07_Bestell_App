@@ -1,9 +1,10 @@
 #basket {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     width: 300px;
     margin-bottom: auto;
     position: -webkit-sticky;
-    position: sticky;
+    position: static;
     top: 0;
 }
