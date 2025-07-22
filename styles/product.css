@@ -1,0 +1,14 @@
+#products {
+    display: flex;
+    height: auto;
+}
+
+.myProduct {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid black;
+}
