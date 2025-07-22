@@ -2,6 +2,8 @@
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: auto;
-    background-color: aquamarine;
+    margin-bottom: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
