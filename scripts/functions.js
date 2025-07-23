@@ -25,7 +25,7 @@ function getFamily() {
 
 function familysRender() {
     let x = document.getElementById('menus'); x.innerHTML = '';
-    for (i = 0; i < productsfamilys.length; i++) { x.innerHTML += familyTemplate(i, productsfamilys[i]); }
+    for (i = 0; i < productsfamilys.length; i++) { x.innerHTML += familyMenuTemplate(i, productsfamilys[i]); }
 }
 
 function productRender() {

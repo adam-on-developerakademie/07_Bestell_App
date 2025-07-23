@@ -14,9 +14,16 @@ function productTemplate(i) {
     return (x)
 }
 
+function familyMenuTemplate(i, value) {
+    let x = `
+                <h2 id="ProductsFamilyM${i}" class="productsFamily" onclick="window.location.href='#ProductsFamily${i}'">${value}</h2>`
+    return (x)
+
+}
+
 function familyTemplate(i, value) {
     let x = `
-                <h2 id="ProductsFamily${i}" class="productsFamily">${value}</h2>`
+                <h2 id="ProductsFamily${i}" class="productsFamily" onclick="window.location.href='#ProductsFamilyM${i}'">${value}</h2>`
     return (x)
 
 }

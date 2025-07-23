@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     scroll-behavior: smooth;
@@ -57,7 +61,7 @@ header {
     border-radius: 10%;
 }
 
-footer{
+footer {
     background-color: #ff8000;
     height: 60px;
     width: 100%;

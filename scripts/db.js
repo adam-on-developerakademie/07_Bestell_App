@@ -1,3 +1,4 @@
+const basket=[];
 const db=[
 
 {
@@ -135,6 +136,5 @@ const db=[
     "addon":false,
     "fatherProductName":""
 }
+];
 
-
-]
