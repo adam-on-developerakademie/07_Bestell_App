@@ -112,3 +112,39 @@
    gap: 20px;
     
 }
+.productAddBasket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    padding: 10px;
+    font-size: 48px;
+    font-weight: bolder;
+    height: 10px;
+    width: 10px;
+    border: 1px solid black;
+    color: #ff8000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.productAddBasket:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+.productRemoveBasket{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    padding: 10px;
+    font-size: 48px;
+    font-weight:bolder;
+    height: 10px;
+    width: 10px;
+    border: 1px solid black;
+    color: #ff8000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.productRemoveBasket:hover {
+    background-color: rgb(255, 208, 208);
+    cursor: pointer;
+}
