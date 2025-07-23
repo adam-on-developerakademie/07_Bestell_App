@@ -11,7 +11,7 @@ function getClean(x) {
 }
 
 function getPrice(x) {
-    return (parseFloat(x).toFixed(2)).replace('.',',')
+    return (parseFloat(x).toFixed(2)).replace('.', ',')
 }
 
 function getFamily() {
@@ -30,14 +30,14 @@ function familysRender() {
 
 function productRender() {
     let x = document.getElementById('products'); x.innerHTML = '';
-    for (j = 0; j < productsfamilys.length; j++) {x.innerHTML+=familyTemplate(j, productsfamilys[j]); 
+    for (j = 0; j < productsfamilys.length; j++) {
+        x.innerHTML += familyTemplate(j, productsfamilys[j]);
         for (i = 0; i < numberOfProducts; i++) {
-            if (db[i].addon) { } else {
-               x.innerHTML+=productTemplate(i,)
+            if (db[i].addon == false && getClean(db[i].pruductFamily) == productsfamilys[j]) {
+                x.innerHTML += productTemplate(i,)
             }
         }
     }
-    console.log(products)
 }
 
 

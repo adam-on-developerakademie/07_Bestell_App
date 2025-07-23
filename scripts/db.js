@@ -21,7 +21,7 @@ const db=[
 {
     "product":"Kürbiskern-Vollkornbrot,",
     "description":" Kürbiskerne geschält, leckerer!",
-    " unit":"400g",
+    "unit":"400g",
     "pirce":7.95,
     "pruductFamily":"Backware",
     "addon":false,

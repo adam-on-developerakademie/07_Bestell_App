@@ -2,9 +2,12 @@ function productTemplate(i) {
     let x = `
                 <div id="myProductId${i}" class="myProduct">
                     <div class="productContent">
-                    <p class="productName">${db[i].product}</p>
-                    <p class="productDescription">${db[i].description}</p>
-                    <p class="productPrice">${getPrice(db[i].pirce)} €</p>
+                    <p class="productName">${getClean(db[i].product)}</p>
+                    <p class="productDescription">${getClean(db[i].description)}</p>
+                        <div class="unitAndPrice">
+                            <p class="productUnit">${getClean(db[i].unit)}</p>
+                            <p class="productPrice">${getPrice(db[i].pirce)} €</p>
+                        </div>
                     </div>
                     <div id="productAddId"  class="productAdd">+</div>
                 </div>`
