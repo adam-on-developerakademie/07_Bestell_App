@@ -24,6 +24,12 @@ main {
     height: 8vh;
     width: 100%;
     background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-bottom: auto;
+
+    
 }
 
 #menus {
