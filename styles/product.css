@@ -1,15 +1,47 @@
-#products {
+#basket {
     display: flex;
+    flex-direction: column;
+    text-align: center;
     height: auto;
+    width: 300px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-bottom: auto;
 }
 
-.myProduct {
+#myBasketProduct {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
     border: 0px solid black;
-    background-color: chartreuse;
+    background-color: whitesmoke;
+}
+
+#products {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+#myProduct {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0px solid black;
+    background-color: whitesmoke;
+}
+
+
+#mainFooter{
+     height: 50px;
+     border: 5px solid black;
 }
