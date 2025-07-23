@@ -1,23 +1,19 @@
-function productTemplate() {
+function productTemplate(i) {
     let x = `
-                <div id="myProductId" class="myProduct">
+                <div id="myProductId${i}" class="myProduct">
                     <div class="productContent">
-                    <p class="productName">Produkt Name</p>
-                    <p class="productDescription">Produkt beschreibung</p>
-                    <p class="productPrice">5,95 €</p>
+                    <p class="productName">${db[i].product}</p>
+                    <p class="productDescription">${db[i].description}</p>
+                    <p class="productPrice">${getPrice(db[i].pirce)} €</p>
                     </div>
                     <div id="productAddId"  class="productAdd">+</div>
                 </div>`
-
-    console.log(x)
     return (x)
-
 }
 
-function familyTemplate() {
+function familyTemplate(i, value) {
     let x = `
-                <h2 id="ProductsFamily1" class="productsFamily">Backware</h2>`
-    console.log(x)
+                <h2 id="ProductsFamily${i}" class="productsFamily">${value}</h2>`
     return (x)
 
 }
