@@ -45,8 +45,6 @@
     font-size: 20px;
 }
 
-.productDescription {}
-
 .productPrice {
     font-size: large;
     color: #ff8000;
@@ -68,7 +66,7 @@
 }
 
 .productAdd:hover {
-    background-color:  rgba(13, 255, 0, 0.068);
+    background-color: rgba(13, 255, 0, 0.068);
     cursor: pointer;
 }
 
@@ -77,9 +75,9 @@
     box-shadow: rgb(229, 229, 229) 0px 50px 100px -20px, rgb(255, 255, 255) 0px 30px 60px -30px, rgb(255, 255, 255) 6px -2px 6px 6px inset;
 }
 
-.unitAndPrice{
-    display: flex ;
+.unitAndPrice {
+    display: flex;
     flex-direction: row;
-   gap: 20px;
-    
+    gap: 20px;
+
 }
