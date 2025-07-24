@@ -80,6 +80,6 @@ function noShipping() {
     basket.length > 0 ?
         document.getElementById('checkboxId').checked ?
             x.innerHTML = getPrice(cost) + '€' :
-            x.innerHTML = cost > 0 ? getPrice(7.8 + cost) + '€' : '0,00€' : x.innerHTML = '0,00€'
+            x.innerHTML = cost > 0 ? cost >= 50 ? getPrice(cost) + '€' : getPrice(7.8 + cost) + '€' : '0,00€' : x.innerHTML = '0,00€'
 
 }
