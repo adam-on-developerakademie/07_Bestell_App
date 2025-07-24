@@ -1,5 +1,6 @@
 const numberOfProducts = db.length
 const productsfamilys = []
+let cost = 0
 
 /**
  * 
@@ -42,7 +43,7 @@ function pushToBasket(i) {
     let x = document.getElementById('basketProducts');
     if (basket[i] == undefined || basket[i] == 0) { pushToBasketHelper(i); x.innerHTML = basketProduct(i, basket[i]) + x.innerHTML }
     else { basket[i]++; document.getElementById('productCounterId' + i).innerHTML = basket[i] };
-    document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i)
+    document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i); basketPriceSumm();
 }
 
 function pushToBasketHelper(j) {
@@ -51,17 +52,34 @@ function pushToBasketHelper(j) {
 
 function removeFromBasket(i) {
     let x = document.getElementById('productCounterId' + i); if (basket[i] == 1) { killBasket(i) }
-    else { basket[i] = basket[i] - 1; x.innerHTML = basket[i]; document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i) }
-
+    else { basket[i] = basket[i] - 1; x.innerHTML = basket[i]; document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i) };
+    basketPriceSumm()
 }
 
 function killBasket(i) {
     let x = document.getElementById('myBasketProductId' + i);
     basket[i] = 0; x.remove();
-    console.log(basket)
+    basketPriceSumm(); noShipping()
 }
 
 function productPriceSumm(i) {
     x = basket[i] * db[i].pirce
     return (getPrice(x))
+}
+
+function basketPriceSumm() {
+    let x = 0;
+    for (i = 0; i < basket.length; i++) { x += (basket[i] != undefined ? basket[i] : 0) * db[i].pirce }
+    cost = x
+    document.getElementById('basketPriceId').innerHTML = getPrice(x) + '€';
+    noShipping()
+}
+
+function noShipping() {
+    let x = document.getElementById('whoolCost')
+    basket.length > 0 ?
+        document.getElementById('checkboxId').checked ?
+            x.innerHTML = getPrice(cost) + '€' :
+            x.innerHTML = cost > 0 ? getPrice(7.8 + cost) + '€' : '0,00€' : x.innerHTML = '0,00€'
+
 }

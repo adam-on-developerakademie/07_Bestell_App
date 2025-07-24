@@ -49,7 +49,7 @@
                 <h2>Warenkorb</h2>
             </div>
             <div id="basketProducts">
-<!--                 <div id="myBasketProductId" class="myBasketProduct">
+                <!--                 <div id="myBasketProductId" class="myBasketProduct">
                     <div class="productWithCouter">
                         <p class="productName">Produkt Name</p>
                         <div class="plusMinusCounter">
@@ -65,9 +65,23 @@
                 </div> -->
             </div>
             <div id="basketFooter">
-                <div class="fullSpace"><p>Zwischensumme</p><p>1</p></div>
-                <div class="fullSpace"><p>Lieferkosten</p><p>2</p></div>
-                <div class="fullSpace"><h3>Gesammt</h3><h3>3</h3></div>
+                <div class="fullSpace">
+                    <p>Zwischensumme</p>
+                    <p id="basketPriceId"></p>
+                </div>
+                <div class="fullSpace">
+                    <p>Lieferkosten</p>
+                    <p>7,80€</p>
+                </div>
+
+                <div class="fullSpace">
+                    <p>Selbstabholer?</p>
+                    <input id="checkboxId" type="checkbox" onclick="noShipping(0)">
+                </div>
+                <div class="fullSpace">
+                    <h3>Gesammt</h3>
+                    <h3 id="whoolCost"></h3>
+                </div>
             </div>
         </section>
     </div>
