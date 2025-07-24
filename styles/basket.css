@@ -1,0 +1,105 @@
+#basket {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    width: 300px;
+    margin-left: 5px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    margin-bottom: auto;
+}
+
+.myBasketProduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center padding: 5px;
+    padding-left: 10px;
+    height: 92px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: white;
+    box-shadow: rgba(10, 37, 64, 0.35) 1px 0px 2px 1px inset;
+}
+
+.productWithCouter {
+
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    padding-top: 5px;
+    gap: 10px;
+}
+
+.plusMinusCounter {
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    width: auto;
+}
+
+.productCounter {
+    display: flex;
+    width: 20px;
+    font-size: 32px;
+    padding: 5px;
+}
+
+
+.priceSummAndDeleteAll {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.deleteAll {
+    display: flex;
+    margin-left: 45px;
+    height: 30px;
+    width: 30px;
+}
+
+.priceSumm {
+    font-size: 28px;
+}
+
+.productAddBasket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 12px;
+    font-size: 48px;
+    font-weight: bolder;
+    height: 10px;
+    width: 10px;
+    border: 1px solid black;
+    color: #ff8000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.productAddBasket:hover {
+    background-color: rgba(13, 255, 0, 0.068);
+    cursor: pointer;
+}
+
+.productRemoveBasket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 48px;
+    font-weight: bolder;
+    height: 10px;
+    width: 10px;
+    border: 1px solid black;
+    color: #ff8000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.productRemoveBasket:hover {
+    background-color: rgba(255, 0, 0, 0.069);
+    cursor: pointer;
+}

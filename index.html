@@ -28,7 +28,6 @@
         <main>
             <div class="mainBackground">
                 <div id="mainHeader">
-
                     <h1>Qick-Shop Online<h5>Bewertung (4,2 von 5 Sternen)</h5>
                     </h1>
 
@@ -39,15 +38,7 @@
             </div>
             <div class="products">
                 <div id="products">
-                    <!--                     <h2 id="ProductsFamily2" class="productsFamily">Backware</h2>
-                    <div id="myProductId" class="myProduct">
-                        <div class="productContent">
-                            <p class="productName">Produkt Name</p>
-                            <p class="productDescription">Produkt beschreibung</p>
-                            <p class="productPrice">5,95 €</p>
-                        </div>
-                        <div id="productAddId" class="productAdd">+</div>
-                    </div> -->
+                    <!--<h2 id="ProductsFamily2" class="productsFamily">Backware</h2><div id="myProductId" class="myProduct"><div class="productContent"><p class="productName">Produkt Name</p><p class="productDescription">Produkt beschreibung</p><p class="productPrice">5,95 €</p></div><div id="productAddId" class="productAdd">+</div></div> -->
                 </div>
                 <div id="mainFooter">
                 </div>
@@ -59,8 +50,18 @@
             </div>
             <div id="basketProducts">
                 <div id="myBasketProductId" class="myBasketProduct">
-                    <div id="productRemoveBasketId" class="productRemoveBasket">&#8722;</div>
-                    <div id="productAddBasketId" class="productAddBasket">+</div>
+                    <div class="productWithCouter">
+                        <p class="productName">Produkt Name</p>
+                        <div class="plusMinusCounter">
+                            <div id="productRemoveBasketId" class="productRemoveBasket">&#8722;</div>
+                            <div id="productCounterId" class="productCounter">05</div>
+                            <div id="productAddBasketId" class="productAddBasket">+</div>
+                        </div>
+                    </div>
+                    <div class="priceSummAndDeleteAll">
+                        <img src="./assets/img/cancel.png" class="deleteAll" alt="">
+                        <div class="priceSumm">125€</div>
+                    </div>
                 </div>
                 <div id="myBasketProductId" class="myBasketProduct"></div>
                 <div id="myBasketProductId" class="myBasketProduct"></div>
