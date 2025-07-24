@@ -51,7 +51,8 @@ function pushToBasketHelper(j) {
 
 function removeFromBasket(i) {
     let x = document.getElementById('productCounterId' + i); if (basket[i] == 1) { killBasket(i) }
-    else { basket[i] = basket[i] - 1; x.innerHTML = basket[i] }
+    else { basket[i] = basket[i] - 1; x.innerHTML = basket[i]; document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i) }
+
 }
 
 function killBasket(i) {
@@ -62,5 +63,5 @@ function killBasket(i) {
 
 function productPriceSumm(i) {
     x = basket[i] * db[i].pirce
-    return ( getPrice(x))
+    return (getPrice(x))
 }

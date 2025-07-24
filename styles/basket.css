@@ -41,8 +41,8 @@
 }
 
 .productCounter {
-    display: flex;
-    width: 20px;
+    width: 30px;
+    text-align: center;
     font-size: 32px;
     padding: 5px;
 }
@@ -52,7 +52,7 @@
     width: 70px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 35px;
 }
 
 .deleteAll {
@@ -82,7 +82,6 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-    margin-left: 12px;
     font-size: 48px;
     font-weight: bolder;
     height: 10px;
@@ -109,10 +108,25 @@
     border: 1px solid black;
     color: #ff8000;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-   
+
 }
 
 .productRemoveBasket:hover {
     background-color: rgba(255, 0, 0, 0.069);
     cursor: pointer;
+}
+
+#basketFooter {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.fullSpace {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
 }
