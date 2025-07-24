@@ -1,5 +1,6 @@
-function init(){
+function init() {
     getFamily();
-    familysRender()
-    productRender()
+    familysRender();
+    productRender();
+    pushToBasket();
 }

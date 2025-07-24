@@ -1,6 +1,6 @@
 function productTemplate(i) {
     let x = `
-                <div id="myProductId${i}" class="myProduct">
+                <div id="myProductId${i}" class="myProduct" >
                     <div class="productContent">
                     <p class="productName">${getClean(db[i].product)}</p>
                     <p class="productDescription">${getClean(db[i].description)}</p>
@@ -9,7 +9,7 @@ function productTemplate(i) {
                             <p class="productPrice">${getPrice(db[i].pirce)} €</p>
                         </div>
                     </div>
-                    <div id="productAddId${i}"  class="productAdd">+</div>
+                    <div id="productAddId${i}"  class="productAdd" onclick="pushToBasket()">+</div>
                 </div>`
     return (x)
 }
@@ -27,3 +27,23 @@ function familyTemplate(i, value) {
     return (x)
 
 }
+
+function basketProduct() {
+    let x = `
+                <div id="myBasketProductId" class="myBasketProduct">
+                    <div class="productWithCouter">
+                        <p class="productName">Produkt Name</p>
+                        <div class="plusMinusCounter">
+                            <div id="productRemoveBasketId" class="productRemoveBasket">&#8722;</div>
+                            <div id="productCounterId" class="productCounter">05</div>
+                            <div id="productAddBasketId" class="productAddBasket">+</div>
+                        </div>
+                    </div>
+                    <div class="priceSummAndDeleteAll">
+                        <img src="./assets/img/cancel.png" class="deleteAll" alt="">
+                        <div class="priceSumm">125€</div>
+                    </div>
+                </div>`;
+    return (x);
+}
+

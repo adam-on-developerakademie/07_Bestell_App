@@ -40,4 +40,9 @@ function productRender() {
     }
 }
 
+function pushToBasket() {
+    let x = document.getElementById('basketProducts');
+    x.innerHTML += basketProduct()
+}
+
 
