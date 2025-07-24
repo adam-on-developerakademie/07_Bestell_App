@@ -14,7 +14,8 @@
 .myBasketProduct {
     display: flex;
     justify-content: space-between;
-    align-items: center padding: 5px;
+    align-items: center;
+    padding: 5px;
     padding-left: 10px;
     height: 92px;
     margin-bottom: 5px;
@@ -59,6 +60,17 @@
     margin-left: 45px;
     height: 30px;
     width: 30px;
+    background: url("../assets/icons/cancel.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+}
+
+.deleteAll:hover {
+    background: url("../assets/icons/cancel_red.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    cursor: pointer;
+
 }
 
 .priceSumm {
@@ -97,6 +109,7 @@
     border: 1px solid black;
     color: #ff8000;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+   
 }
 
 .productRemoveBasket:hover {

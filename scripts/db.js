@@ -20,7 +20,7 @@ const db=[
     "fatherProductName":""
 },
 {
-    "product":"Kürbiskern-Vollkornbrot,",
+    "product":"Kürbiskernbrot",
     "description":" Kürbiskerne geschält, leckerer!",
     "unit":"400g",
     "pirce":7.95,
@@ -29,7 +29,7 @@ const db=[
     "fatherProductName":""
 },
 {
-    "product":" kartoffelbrötchen",
+    "product":"Kartoffelbrötchen",
     "description":"feinste Kartoffelflocken",
     "unit":"4Stück",
     "pirce":5.80,

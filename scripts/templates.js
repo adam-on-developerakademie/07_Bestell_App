@@ -9,7 +9,7 @@ function productTemplate(i) {
                             <p class="productPrice">${getPrice(db[i].pirce)} €</p>
                         </div>
                     </div>
-                    <div id="productAddId${i}"  class="productAdd" onclick="pushToBasket()">+</div>
+                    <div id="productAddId${i}"  class="productAdd" onclick="pushToBasket(${i})">+</div>
                 </div>`
     return (x)
 }
@@ -23,27 +23,27 @@ function familyMenuTemplate(i, value) {
 
 function familyTemplate(i, value) {
     let x = `
-                <h2 id="ProductsFamily${i}" class="productsFamily" onclick="window.location.href='#ProductsFamilyM${i}'">${value}</h2>`
+                <h2 id="ProductsFamily${i}" class="productsFamily" onclick="window.location.href='#header'">${value}</h2>`
     return (x)
 
 }
 
-function basketProduct() {
-    let x = `
-                <div id="myBasketProductId" class="myBasketProduct">
+function basketProduct(i,n) {
+    let x = i > -1 ? `
+                <div id="myBasketProductId${i}" class="myBasketProduct">
                     <div class="productWithCouter">
-                        <p class="productName">Produkt Name</p>
+                        <p class="productName">${getClean(db[i].product)}</p>
                         <div class="plusMinusCounter">
-                            <div id="productRemoveBasketId" class="productRemoveBasket">&#8722;</div>
-                            <div id="productCounterId" class="productCounter">05</div>
-                            <div id="productAddBasketId" class="productAddBasket">+</div>
+                            <div id="productRemoveBasketId${i}" class="productRemoveBasket" onclick="removeFromBasket(${i})">&#8722;</div>
+                            <div id="productCounterId${i}" class="productCounter">${n}</div>
+                            <div id="productAddBasketId${i}" class="productAddBasket" onclick="pushToBasket(${i})">+</div>
                         </div>
                     </div>
                     <div class="priceSummAndDeleteAll">
-                        <img src="./assets/img/cancel.png" class="deleteAll" alt="">
-                        <div class="priceSumm">125€</div>
+                        <div class="deleteAll" onclick="killBasket(${i})"></div>
+                        <div id="priceSummId${i}" class="priceSumm">${productPriceSumm(i)}€</div>
                     </div>
-                </div>`;
+                </div>`: ``;
     return (x);
 }
 

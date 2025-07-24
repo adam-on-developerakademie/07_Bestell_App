@@ -17,9 +17,7 @@ function getPrice(x) {
 function getFamily() {
     for (i = 0; i < numberOfProducts; i++) {
         let x = getClean(db[i].pruductFamily);
-        if (db[i].addon) { } else {
-            if (productsfamilys.indexOf(x) == -1) { productsfamilys.push(x) }
-        }
+        if (db[i].addon) { } else { if (productsfamilys.indexOf(x) == -1) { productsfamilys.push(x) } }
     }
 }
 
@@ -40,9 +38,29 @@ function productRender() {
     }
 }
 
-function pushToBasket() {
+function pushToBasket(i) {
     let x = document.getElementById('basketProducts');
-    x.innerHTML += basketProduct()
+    if (basket[i] == undefined || basket[i] == 0) { pushToBasketHelper(i); x.innerHTML = basketProduct(i, basket[i]) + x.innerHTML }
+    else { basket[i]++; document.getElementById('productCounterId' + i).innerHTML = basket[i] };
+    document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i)
 }
 
+function pushToBasketHelper(j) {
+    for (i = 0; basket[j] = 0; i++) { basket[i] == undefined ? basket.push(0) : basket[j]++ }; basket[j]++
+}
 
+function removeFromBasket(i) {
+    let x = document.getElementById('productCounterId' + i); if (basket[i] == 1) { killBasket(i) }
+    else { basket[i] = basket[i] - 1; x.innerHTML = basket[i] }
+}
+
+function killBasket(i) {
+    let x = document.getElementById('myBasketProductId' + i);
+    basket[i] = 0; x.remove();
+    console.log(basket)
+}
+
+function productPriceSumm(i) {
+    x = basket[i] * db[i].pirce
+    return ( getPrice(x))
+}
