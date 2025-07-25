@@ -50,7 +50,7 @@ function pushToBasket(i) {
     let x = document.getElementById('basketProducts');
     if (basket[i] == undefined || basket[i] == 0) { pushToBasketHelper(i); x.innerHTML = basketProduct(i, basket[i]) + x.innerHTML; poductsOrder.push(i) }
     else { basket[i]++; document.getElementById('productCounterId' + i).innerHTML = basket[i] };
-    document.getElementById('productMainCounterId'+i).innerHTML=basket[i];
+    document.getElementById('productMainCounterId' + i).innerHTML = basket[i];
     document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i); basketPriceSumm();
 }
 
@@ -59,8 +59,8 @@ function pushToBasketHelper(j) {
 }
 
 function removeFromBasket(i) {
-    let x = document.getElementById('productCounterId' + i); if (basket[i] == 1) { killBasket(i) ; document.getElementById('productMainCounterId'+i).innerHTML=''}
-    else { basket[i] = basket[i] - 1; x.innerHTML = basket[i]; document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i); document.getElementById('productMainCounterId'+i).innerHTML=basket[i];};
+    let x = document.getElementById('productCounterId' + i); if (basket[i] == 1) { killBasket(i); document.getElementById('productMainCounterId' + i).innerHTML = '' }
+    else { basket[i] = basket[i] - 1; x.innerHTML = basket[i]; document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i); document.getElementById('productMainCounterId' + i).innerHTML = basket[i]; };
     basketPriceSumm()
 }
 
@@ -98,7 +98,18 @@ function basketToggle() {
 }
 
 function myOrder() {
-    if (poductsOrder.length > 0) { basket.length = 0; poductsOrder.length = 0;noShipping();basketPriceSumm(); document.getElementById('basketProducts').innerHTML = ''; document.getElementById('oderDoneImage').style.display = "block" } else {
+    if (poductsOrder.length > 0) { basket.length = 0; poductsOrder.length = 0; noShipping(); basketPriceSumm(); mainCounterReset(); document.getElementById('basketProducts').innerHTML = ''; document.getElementById('oderDoneImage').style.display = "block" } else {
         document.getElementById('oderDoneImage').style.display = "none"
     };
-} 
+}
+
+function mainCounterReset() {
+    for (j = 0; j < productsfamilys.length; j++) {
+        x.innerHTML += familyTemplate(j, productsfamilys[j]);
+        for (i = 0; i < numberOfProducts; i++) {
+            if (db[i].addon == false && getClean(db[i].pruductFamily) == productsfamilys[j]) {
+                document.getElementById('productMainCounterId' + i).innerHTML = ''
+            }
+        }
+    }
+}
