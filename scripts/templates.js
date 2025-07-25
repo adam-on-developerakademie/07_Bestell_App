@@ -79,7 +79,7 @@ let myBody=`
         </main>
         <section id="basket">
             <div id="basketHeader">
-                <h2 id="basketButton" onclick="basketToggle() ">Warenkorb</h2>
+                <h2 id="basketButton" onclick="basketToggle() ">Warenkorb <div class="arrowBottom">&#10146;</div><div class="arrowTop">&#10146;</div></h2>
             </div>
             <div id="basketProducts">
             </div>
@@ -107,6 +107,7 @@ let myBody=`
         </section>
     </div>
     <footer>
+        <p class="footerText">© design by Adam</p>
     </footer>
     <script src="./script.js"></script>
     <script src="./scripts/db.js"></script>
@@ -147,7 +148,7 @@ let myBodySmall=`
     </div>
             <section id="basket">
             <div id="basketHeader">
-                <h2 id="basketButton" onclick="basketToggle() ">Warenkorb</h2>
+                <h2 id="basketButton" onclick="basketToggle() ">Warenkorb <div class="arrowBottom">&#10146;</div><div class="arrowTop">&#10146;</div></h2>
             </div>
             <div id="basketProducts">
             </div>
@@ -174,6 +175,7 @@ let myBodySmall=`
             </div>
         </section>
     <footer>
+        <p class="footerText">© design by Adam</p>
     </footer>
     <script src="./script.js"></script>
     <script src="./scripts/db.js"></script>

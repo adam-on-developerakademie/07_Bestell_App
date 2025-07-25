@@ -2,6 +2,7 @@
     margin-left: 5px;
     margin-right: 0.01px;
     height: auto;
+    overflow: hidden;
 }
 
 #products {
