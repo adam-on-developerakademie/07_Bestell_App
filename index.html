@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/product.css">
     <link rel="shortcut icon" href="./assets/icons/Favicon/favicon.ico" type="image/x-icon">
 </head>
+
 <body id="myBody" onload="init()">
     <header id="header">
         <div class="header">
@@ -42,7 +43,7 @@
         </main>
         <section id="basket">
             <div id="basketHeader">
-                <h2>Warenkorb</h2>
+                <h2 id="basketButton" onclick="basketToggle() ">Warenkorb</h2>
             </div>
             <div id="basketProducts">
             </div>
@@ -57,14 +58,15 @@
                 </div>
                 <div class="fullSpace">
                     <p>Selbstabholer?</p>
-                    <input id="checkboxId" type="checkbox" onclick="noShipping(0),  basketRender() ">
+                    <input id="checkboxId" type="checkbox" onclick="noShipping(0) ">
                 </div>
                 <div class="fullSpace">
                     <h3>Gesammt:</h3>
                     <h3 id="whoolCost"></h3>
                 </div>
                 <div class="fullSpace">
-                <p><br>ab 50€ Versandkostenfrei!</p><p></p>
+                    <p><br>ab 50€ Versandkostenfrei!</p>
+                    <p></p>
                 </div>
             </div>
         </section>
@@ -76,4 +78,5 @@
     <script src="./scripts/functions.js"></script>
     <script src="./scripts/templates.js"></script>
 </body>
+
 </html>

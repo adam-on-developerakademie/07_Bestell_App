@@ -79,7 +79,7 @@ let myBody=`
         </main>
         <section id="basket">
             <div id="basketHeader">
-                <h2>Warenkorb</h2>
+                <h2 id="basketButton" onclick="basketToggle() ">Warenkorb</h2>
             </div>
             <div id="basketProducts">
             </div>
@@ -147,7 +147,7 @@ let myBodySmall=`
     </div>
             <section id="basket">
             <div id="basketHeader">
-                <h2>Warenkorb</h2>
+                <h2 id="basketButton" onclick="basketToggle() ">Warenkorb</h2>
             </div>
             <div id="basketProducts">
             </div>

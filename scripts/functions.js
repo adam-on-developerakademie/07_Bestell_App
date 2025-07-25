@@ -2,6 +2,7 @@ const numberOfProducts = db.length
 const productsfamilys = []
 const poductsOrder = []
 let cost = 0
+let toogleBasket = 1
 
 /**
  * 
@@ -87,5 +88,13 @@ function noShipping() {
         document.getElementById('checkboxId').checked ?
             x.innerHTML = getPrice(cost) + '€' :
             x.innerHTML = cost > 0 ? cost >= 50 ? getPrice(cost) + '€' : getPrice(7.8 + cost) + '€' : '0,00€' : x.innerHTML = '0,00€'
-
 }
+
+function basketToggle() {
+    if (toogleBasket == -1) { document.getElementById('basketProducts').style.display = 'none'; document.getElementById('basketButton').classList.add('stopHover') } else {
+        document.getElementById('basketProducts').style.display = ''; document.getElementById('basketButton').classList.remove('stopHover')
+    }; toogleBasket = toogleBasket * -1
+}
+
+
+
