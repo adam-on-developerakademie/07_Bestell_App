@@ -67,7 +67,7 @@ function removeFromBasket(i) {
 function killBasket(i) {
     let x = document.getElementById('myBasketProductId' + i);
     basket[i] = 0; x.remove(); poductsOrder.indexOf(i) > -1 ? poductsOrder.splice(poductsOrder.indexOf(i), 1) : nothing;
-    basketPriceSumm(); noShipping()
+    basketPriceSumm(); noShipping();document.getElementById('productMainCounterId' + i).innerHTML = ''
 }
 
 function productPriceSumm(i) {
