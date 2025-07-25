@@ -64,7 +64,6 @@
     padding: 5px;
 }
 
-
 .priceSummAndDeleteAll {
     width: 95px;
     display: flex;
@@ -87,7 +86,6 @@
     background-repeat: no-repeat;
     background-size: 30px 30px;
     cursor: pointer;
-
 }
 
 .priceSumm {
@@ -166,7 +164,6 @@
 .arrowTop {
     font-size: 20px;
     transform: rotate(90deg);
-
 }
 
 .arrowBottom {
@@ -218,14 +215,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 #oderDoneImage {
     display: none;
     height: 700px;
     width: 700px;
-
 }
 
 @media (max-width: 700px) {

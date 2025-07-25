@@ -3,7 +3,6 @@ main {
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-
 }
 
 .mainBackground {
@@ -14,7 +13,6 @@ main {
     background-position: center;
     background-image: url(../assets/img/baked.jpg);
     background-size: cover;
-
 }
 
 #mainHeader {
@@ -43,7 +41,6 @@ main {
     #menus {
         display: block;
     }
-
 }
 
 #products {

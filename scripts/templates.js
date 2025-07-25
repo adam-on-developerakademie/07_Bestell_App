@@ -18,14 +18,12 @@ function familyMenuTemplate(i, value) {
     let x = `
                 <h2 id="ProductsFamilyM${i}" class="productsFamily" onclick="window.location.href='#ProductsFamily${i}'">${value}</h2>`
     return (x)
-
 }
 
 function familyTemplate(i, value) {
     let x = `
                 <h2 id="ProductsFamily${i}" class="productsFamily" onclick="window.location.href='#header'">${value}</h2>`
     return (x)
-
 }
 
 function basketProduct(i, n) {
@@ -191,3 +189,4 @@ let myBodySmall = `
     <script src="./scripts/templates.js"></script>
 </body>
 `
+
