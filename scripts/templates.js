@@ -9,7 +9,10 @@ function productTemplate(i) {
                             <p class="productPrice">${getPrice(db[i].pirce)} €</p>
                         </div>
                     </div>
-                    <div id="productAddId${i}"  class="productAdd" onclick="pushToBasket(${i})">+</div>
+                    <div>
+                        <div id="productAddId${i}"  class="productAdd" onclick="pushToBasket(${i})">+</div>
+                        <div id="productMainCounterId${i}" class="productCounter"></div>
+                    </div>    
                 </div>`
     return (x)
 }

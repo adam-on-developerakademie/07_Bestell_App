@@ -50,6 +50,7 @@ function pushToBasket(i) {
     let x = document.getElementById('basketProducts');
     if (basket[i] == undefined || basket[i] == 0) { pushToBasketHelper(i); x.innerHTML = basketProduct(i, basket[i]) + x.innerHTML; poductsOrder.push(i) }
     else { basket[i]++; document.getElementById('productCounterId' + i).innerHTML = basket[i] };
+    document.getElementById('productMainCounterId'+i).innerHTML=basket[i];
     document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i); basketPriceSumm();
 }
 
@@ -58,8 +59,8 @@ function pushToBasketHelper(j) {
 }
 
 function removeFromBasket(i) {
-    let x = document.getElementById('productCounterId' + i); if (basket[i] == 1) { killBasket(i) }
-    else { basket[i] = basket[i] - 1; x.innerHTML = basket[i]; document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i) };
+    let x = document.getElementById('productCounterId' + i); if (basket[i] == 1) { killBasket(i) ; document.getElementById('productMainCounterId'+i).innerHTML=''}
+    else { basket[i] = basket[i] - 1; x.innerHTML = basket[i]; document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i); document.getElementById('productMainCounterId'+i).innerHTML=basket[i];};
     basketPriceSumm()
 }
 
