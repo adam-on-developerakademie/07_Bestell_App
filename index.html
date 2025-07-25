@@ -43,7 +43,9 @@
         </main>
         <section id="basket">
             <div id="basketHeader">
-                <h2 id="basketButton" onclick="basketToggle() ">Warenkorb <div class="arrowBottom">&#10146;</div><div class="arrowTop">&#10146;</div></h2>
+                <h2 id="basketButton" onclick="basketToggle() ">Warenkorb <div class="arrowBottom">&#10146;</div>
+                    <div class="arrowTop">&#10146;</div>
+                </h2>
             </div>
             <div id="basketProducts">
             </div>
@@ -68,11 +70,14 @@
                     <p><br>ab 50€ Versandkostenfrei!</p>
                     <p></p>
                 </div>
+                <div class="fullSpace2">
+                    <h2 id="order" onclick="order()">Bestellen</h2>
+                </div>
             </div>
         </section>
     </div>
     <footer>
-            <p class="footerText">© design by Adam</p>
+        <p class="footerText">© design by Adam</p>
     </footer>
     <script src="./script.js"></script>
     <script src="./scripts/db.js"></script>

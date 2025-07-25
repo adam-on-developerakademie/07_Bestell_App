@@ -23,7 +23,6 @@
 @media (max-width: 700px) {
     #basket {
         width: 100%;
-        padding-bottom: 80px;
         margin-left: 0
     }
 }
@@ -151,9 +150,16 @@
     background-color: white;
 }
 
+.fullSpace2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: white;
+}
+
 .posAbsolutBottom {
     position: absolute;
-    bottom: 60px;
+    bottom: 69px;
     background-color: white;
 }
 
@@ -164,6 +170,37 @@
 }
 
 .arrowBottom {
-     font-size: 20px;
+    font-size: 20px;
     transform: rotate(-90deg);
+}
+
+#order {
+    padding-bottom: 0px;
+}
+
+#order:hover {
+    cursor: pointer;
+    box-shadow: rgb(229, 229, 229) 0px 50px 100px -20px, rgb(255, 255, 255) 0px 30px 60px -30px, rgb(255, 255, 255) 6px -2px 6px 6px inset;
+}
+
+@media (max-width: 700px) {
+    #order {
+        border-top-right-radius: 25px;
+    }
+}
+
+@media (max-width: 450px) {
+    #order {
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+    }
+}
+
+@media (min-width: 700px) {
+    #order {
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
 }

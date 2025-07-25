@@ -103,6 +103,9 @@ let myBody=`
                 <div class="fullSpace">
                 <p><br>ab 50€ Versandkostenfrei!</p><p></p>
                 </div>
+                <div class="fullSpace2">
+                    <h2 id="order" onclick="myOrder()">Bestellen</h2>
+                </div>
             </div>
         </section>
     </div>
@@ -171,6 +174,9 @@ let myBodySmall=`
                 </div>
                 <div class="fullSpace">
                 <p><br>ab 50€ Versandkostenfrei!</p><p></p>
+                </div>
+                <div class="fullSpace2">
+                    <h2 id="order" onclick="myOrder()">Bestellen</h2>
                 </div>
             </div>
         </section>
