@@ -11,6 +11,12 @@
     margin-bottom: auto;
 }
 
+@media (max-width: 450px) {
+    #basket {
+        width: 100%;
+    }
+}
+
 .myBasketProduct {
     display: flex;
     justify-content: space-between;

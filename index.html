@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./styles/product.css">
     <link rel="shortcut icon" href="./assets/icons/Favicon/favicon.ico" type="image/x-icon">
 </head>
-<body onload="init()">
+<body id="myBody" onload="init()">
     <header id="header">
         <div class="header">
             <img id="headerImage" src="./assets/icons/Logo/Logo.png" alt="">
@@ -29,7 +29,6 @@
                 <div id="mainHeader">
                     <h1>Qick-Shop Online<h5>Bewertung (4,2 von 5 Sternen)</h5>
                     </h1>
-
                     <div id="menus">
                     </div>
                 </div>
@@ -58,7 +57,7 @@
                 </div>
                 <div class="fullSpace">
                     <p>Selbstabholer?</p>
-                    <input id="checkboxId" type="checkbox" onclick="noShipping(0)">
+                    <input id="checkboxId" type="checkbox" onclick="noShipping(0),  basketRender() ">
                 </div>
                 <div class="fullSpace">
                     <h3>Gesammt:</h3>
@@ -72,11 +71,9 @@
     </div>
     <footer>
     </footer>
-
     <script src="./script.js"></script>
     <script src="./scripts/db.js"></script>
     <script src="./scripts/functions.js"></script>
     <script src="./scripts/templates.js"></script>
 </body>
-
 </html>

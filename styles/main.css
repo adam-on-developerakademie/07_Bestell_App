@@ -39,6 +39,13 @@ main {
     background-color: whitesmoke
 }
 
+@media (max-width: 450px){
+    #menus{
+        display: block;
+    }
+    
+}
+
 #products {
     display: flex;
     flex-direction: column;

@@ -1,5 +1,6 @@
 const numberOfProducts = db.length
 const productsfamilys = []
+const poductsOrder = []
 let cost = 0
 
 /**
@@ -39,9 +40,14 @@ function productRender() {
     }
 }
 
+function basketRender() {
+    let x = document.getElementById('basketProducts'); x.innerHTML = '';
+    for (i = 0; i < basket.length; i++) { if (basket[poductsOrder[i]] != undefined && basket[poductsOrder[i]] != 0) { x.innerHTML = basketProduct([poductsOrder[i]], basket[poductsOrder[i]]) + x.innerHTML } }
+}
+
 function pushToBasket(i) {
     let x = document.getElementById('basketProducts');
-    if (basket[i] == undefined || basket[i] == 0) { pushToBasketHelper(i); x.innerHTML = basketProduct(i, basket[i]) + x.innerHTML }
+    if (basket[i] == undefined || basket[i] == 0) { pushToBasketHelper(i); x.innerHTML = basketProduct(i, basket[i]) + x.innerHTML; poductsOrder.push(i) }
     else { basket[i]++; document.getElementById('productCounterId' + i).innerHTML = basket[i] };
     document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i); basketPriceSumm();
 }
@@ -58,13 +64,13 @@ function removeFromBasket(i) {
 
 function killBasket(i) {
     let x = document.getElementById('myBasketProductId' + i);
-    basket[i] = 0; x.remove();
+    basket[i] = 0; x.remove(); poductsOrder.indexOf(i) > -1 ? poductsOrder.splice(poductsOrder.indexOf(i), 1) : nothing;
     basketPriceSumm(); noShipping()
 }
 
 function productPriceSumm(i) {
     x = basket[i] * db[i].pirce
-    return (getPrice(x))
+    return (getPrice(x) + '€')
 }
 
 function basketPriceSumm() {
