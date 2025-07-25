@@ -91,9 +91,13 @@ function noShipping() {
 }
 
 function basketToggle() {
-    if (toogleBasket == -1) { document.getElementById('basketProducts').style.display = 'none'; document.getElementById('basketButton').classList.add('stopHover');/* document.getElementById('basket').style.paddingBottom='50px';  */} else {
+    if (toogleBasket == -1) { document.getElementById('basketProducts').style.display = 'none'; document.getElementById('basketButton').classList.add('stopHover'); } else {
         document.getElementById('basketProducts').style.display = ''; document.getElementById('basketButton').classList.remove('stopHover')
     }; toogleBasket = toogleBasket * -1
 }
 
-function myOrder (){ if(poductsOrder.length>0){poductsOrder.length=0;document.getElementById('basketProducts').innerHTML = '';}}
+function myOrder() {
+    if (poductsOrder.length > 0) { basket.length = 0; poductsOrder.length = 0;noShipping();basketPriceSumm(); document.getElementById('basketProducts').innerHTML = ''; document.getElementById('oderDoneImage').style.display = "block" } else {
+        document.getElementById('oderDoneImage').style.display = "none"
+    };
+} 

@@ -28,7 +28,7 @@ function familyTemplate(i, value) {
 
 }
 
-function basketProduct(i,n) {
+function basketProduct(i, n) {
     let x = i > -1 ? `
                 <div id="myBasketProductId${i}" class="myBasketProduct">
                     <div class="productWithCouter">
@@ -47,8 +47,9 @@ function basketProduct(i,n) {
     return (x);
 }
 
-let myBody=`
+let myBody = `
 <body id="myBody" onload="init()">
+         <div id="oderDone"><img id="oderDoneImage" onclick="myOrder()"src="./assets/icons/well_done.png" alt=""></div>
     <header id="header">
         <div class="header">
             <img id="headerImage" src="./assets/icons/Logo/Logo.png" alt="">
@@ -118,8 +119,9 @@ let myBody=`
     <script src="./scripts/templates.js"></script>
 </body>`
 
-let myBodySmall=`
+let myBodySmall = `
 <body id="myBody" onload="init()">
+        <div id="oderDone"><img id="oderDoneImage" onclick="myOrder()"src="./assets/icons/well_done.png" alt=""></div>
     <header id="header">
         <div class="header">
             <img id="headerImage" src="./assets/icons/Logo/Logo.png" alt="">

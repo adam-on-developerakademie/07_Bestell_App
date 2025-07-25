@@ -204,3 +204,33 @@
         border-bottom-left-radius: 25px;
     }
 }
+
+#oderDone {
+    display: none;
+    height: 0px;
+    width: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff8000;
+    cursor: pointer;
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#oderDoneImage {
+    display: none;
+    height: 700px;
+    width: 700px;
+
+}
+
+@media (max-width: 700px) {
+    #oderDoneImage {
+        height: 300px;
+        width: 300px;
+    }
+}
