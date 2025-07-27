@@ -84,3 +84,7 @@ footer {
     font-size: 20px;
     color: antiquewhite;
 }
+
+.displayNone{
+    display: none;
+}

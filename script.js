@@ -12,6 +12,7 @@ function normal() {
         basketRender();
         priceCalculation();
         myCurrentModus = 0
+        document.getElementById('basketProducts').classList.remove('displayNone')
     }
 };
 
@@ -24,6 +25,7 @@ function small() {
         basketRender();
         priceCalculation();
         myCurrentModus = 1
+        document.getElementById('basketProducts').classList.add('displayNone')
     }
 };
 

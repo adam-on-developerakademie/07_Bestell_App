@@ -2,7 +2,6 @@ const numberOfProducts = db.length
 const productsfamilys = []
 const poductsOrder = []
 let cost = 0
-let toogleBasket = 1
 
 /**
  * 
@@ -99,24 +98,22 @@ function volumeDiscount() {
 }
 
 function basketToggle() {
-    if (toogleBasket == -1) { document.getElementById('basketProducts').style.display = 'none'; document.getElementById('basketButton').classList.add('stopHover'); } else {
-        document.getElementById('basketProducts').style.display = ''; document.getElementById('basketButton').classList.remove('stopHover')
-    }; toogleBasket = toogleBasket * -1
+    document.getElementById('basketProducts').classList.toggle('displayNone')
+
+    function myOrder() {
+        if (poductsOrder.length > 0) { basket.length = 0; poductsOrder.length = 0; priceCalculation(); basketPriceSumm(); mainCounterReset(); document.getElementById('basketProducts').innerHTML = ''; document.getElementById('oderDoneImage').style.display = "block" } else {
+            document.getElementById('oderDoneImage').style.display = "none"
+        };
+    }
 }
 
-function myOrder() {
-    if (poductsOrder.length > 0) { basket.length = 0; poductsOrder.length = 0; priceCalculation(); basketPriceSumm(); mainCounterReset(); document.getElementById('basketProducts').innerHTML = ''; document.getElementById('oderDoneImage').style.display = "block" } else {
-        document.getElementById('oderDoneImage').style.display = "none"
-    };
-}
-
-function mainCounterReset() {
-    for (j = 0; j < productsfamilys.length; j++) {
-        x.innerHTML += familyTemplate(j, productsfamilys[j]);
-        for (i = 0; i < numberOfProducts; i++) {
-            if (db[i].addon == false && getClean(db[i].pruductFamily) == productsfamilys[j]) {
-                document.getElementById('productMainCounterId' + i).innerHTML = ''
+    function mainCounterReset() {
+        for (j = 0; j < productsfamilys.length; j++) {
+            x.innerHTML += familyTemplate(j, productsfamilys[j]);
+            for (i = 0; i < numberOfProducts; i++) {
+                if (db[i].addon == false && getClean(db[i].pruductFamily) == productsfamilys[j]) {
+                    document.getElementById('productMainCounterId' + i).innerHTML = ''
+                }
             }
         }
     }
-}
