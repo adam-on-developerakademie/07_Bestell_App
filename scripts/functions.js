@@ -67,7 +67,7 @@ function removeFromBasket(i) {
 function killBasket(i) {
     let x = document.getElementById('myBasketProductId' + i);
     basket[i] = 0; x.remove(); poductsOrder.indexOf(i) > -1 ? poductsOrder.splice(poductsOrder.indexOf(i), 1) : nothing;
-    basketPriceSumm(); noShipping();document.getElementById('productMainCounterId' + i).innerHTML = ''
+    basketPriceSumm(); priceCalculation(); document.getElementById('productMainCounterId' + i).innerHTML = ''
 }
 
 function productPriceSumm(i) {
@@ -80,15 +80,22 @@ function basketPriceSumm() {
     for (i = 0; i < basket.length; i++) { x += (basket[i] != undefined ? basket[i] : 0) * db[i].pirce }
     cost = x
     document.getElementById('basketPriceId').innerHTML = getPrice(x) + '€';
-    noShipping()
+    priceCalculation()
 }
 
-function noShipping() {
+function priceCalculation() {
     let x = document.getElementById('whoolCost')
-    basket.length > 0 ?
-        document.getElementById('checkboxId').checked ?
-            x.innerHTML = getPrice(cost) + '€' :
-            x.innerHTML = cost > 0 ? cost >= 50 ? getPrice(cost) + '€' : getPrice(7.8 + cost) + '€' : '0,00€' : x.innerHTML = '0,00€'
+    basket.length > 0 ? (
+        document.getElementById('checkboxId').checked ? (
+            x.innerHTML = getPrice(cost) + '€') :
+            x.innerHTML = cost > 0 ? volumeDiscount() : '0,00€') : x.innerHTML = '0,00€'
+}
+function volumeDiscount() {
+    let x;
+    if (cost >= 50) {
+        document.getElementById('discount').style.display = 'none'; x = getPrice(cost) + '€';
+    } else { document.getElementById('discount').style.display = ''; x = getPrice(7.8 + cost) + '€' };
+    return x
 }
 
 function basketToggle() {
@@ -98,7 +105,7 @@ function basketToggle() {
 }
 
 function myOrder() {
-    if (poductsOrder.length > 0) { basket.length = 0; poductsOrder.length = 0; noShipping(); basketPriceSumm(); mainCounterReset(); document.getElementById('basketProducts').innerHTML = ''; document.getElementById('oderDoneImage').style.display = "block" } else {
+    if (poductsOrder.length > 0) { basket.length = 0; poductsOrder.length = 0; priceCalculation(); basketPriceSumm(); mainCounterReset(); document.getElementById('basketProducts').innerHTML = ''; document.getElementById('oderDoneImage').style.display = "block" } else {
         document.getElementById('oderDoneImage').style.display = "none"
     };
 }

@@ -90,13 +90,13 @@ let myBody = `
                     <p>Zwischensumme:</p>
                     <p id="basketPriceId"></p>
                 </div>
-                <div class="fullSpace">
+                <div class="fullSpace" id="discount">
                     <p>Lieferkosten:</p>
                     <p>7,80€</p>
                 </div>
                 <div class="fullSpace">
                     <p>Selbstabholer?</p>
-                    <input id="checkboxId" type="checkbox" onclick="noShipping(0)">
+                    <input id="checkboxId" type="checkbox" onclick="priceCalculation(0)">
                 </div>
                 <div class="fullSpace">
                     <h3>Gesammt:</h3>
@@ -163,13 +163,13 @@ let myBodySmall = `
                     <p>Zwischensumme:</p>
                     <p id="basketPriceId"></p>
                 </div>
-                <div class="fullSpace">
+                <div class="fullSpace" id="discount">
                     <p>Lieferkosten:</p>
                     <p>7,80€</p>
                 </div>
                 <div class="fullSpace">
                     <p>Selbstabholer?</p>
-                    <input id="checkboxId" type="checkbox" onclick="noShipping(0)">
+                    <input id="checkboxId" type="checkbox" onclick="priceCalculation(0)">
                 </div>
                 <div class="fullSpace">
                     <h3>Gesammt:</h3>
