@@ -15,13 +15,22 @@ body {
     align-items: center;
 }
 
-header {
+#header {
     background-color: #ff8000;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+@media (max-width: 700px) {
+    #header {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+    }
+}
+
 
 .myBody {
     display: flex;
@@ -38,6 +47,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 60px;
+
 }
 
 #headerImage {
@@ -71,20 +81,58 @@ footer {
     height: 60px;
     width: 100%;
     display: flex;
-    justify-content: end;
+    flex-direction: column;
     align-items: center;
     position: -webkit-sticky;
     position: sticky;
     bottom: 0;
 }
 
+@media (max-width: 700px) {
+    footer {
+        height: auto;
+    }
+
+    .miniBasketBottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: white;
+    }
+
+    .fullSpace3 {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .fullSpace2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+ 
+    }
+}
+
+#footerText {
+    background-color: #ff8000;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+
 .footerText {
-    padding-right: 50px;
     font-family: Birthstone-Regular;
     font-size: 20px;
     color: antiquewhite;
 }
 
-.displayNone{
-    display: none;
+.displayNone {
+    display: none !important;
 }

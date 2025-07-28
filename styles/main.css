@@ -1,6 +1,7 @@
 main {
     display: flex;
     flex-direction: column;
+    height: auto;
     width: 100%;
     min-height: 100vh;
 }
@@ -22,9 +23,6 @@ main {
     height: 8vh;
     width: 100%;
     background-color: white;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
     margin-bottom: auto;
 }
 
@@ -49,6 +47,7 @@ main {
     height: 200px;
     width: 100%;
     border: 2ps solid black;
+    padding-bottom: 15vh;
 }
 
 h1 {
