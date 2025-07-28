@@ -106,13 +106,21 @@ footer {
         display: flex;
         justify-content: space-evenly;
     }
+
     .fullSpace2 {
         width: 100%;
         display: flex;
         justify-content: center;
         padding-top: 15px;
- 
+
     }
+}
+
+
+#myFooter {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
 }
 
 #footerText {
