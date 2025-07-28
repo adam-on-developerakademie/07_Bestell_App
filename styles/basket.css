@@ -9,7 +9,7 @@
 }
 
 @media (min-width: 700px) {
-    #basketSide {
+    #basketSideId {
         position: -webkit-sticky;
         position: sticky;
         top: 0;
