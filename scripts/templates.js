@@ -61,6 +61,7 @@ function miniBasketBottom() {
         <h3 id="whoolCost">${x}</h3>
     </div>
     <div class="fullSpace3">
+        <h2 id="callBasket" onclick="switchButton(), basketBottonOn()">Warenkorb</h2>
         <h2 id="order" onclick="myOrder()">Bestellen</h2>
     </div>
 </div>

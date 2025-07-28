@@ -14,6 +14,7 @@ function normal() {
         document.getElementById('myMain').classList.remove('displayNone');
         console.log(myCurrentModus)
         priceCalculation();
+         document.getElementById('callShop').classList.add('displayNone')
     }
 };
 
@@ -25,6 +26,7 @@ function small() {
         myCurrentModus = 1;
         document.getElementById('basketSideId').style.width = '100%'
         document.getElementById('basketSideId').classList.add('displayNone')
+        document.getElementById('myFooter').innerHTML=miniBasketBottom()
         console.log(myCurrentModus)
         priceCalculation();
     }

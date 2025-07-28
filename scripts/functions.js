@@ -25,12 +25,14 @@ function getFamily() {
 }
 
 function familysRender() {
-    let x = document.getElementById('menus'); x.innerHTML = '';
+    let x = document.getElementById('menus');
+    x.innerHTML = '';
     for (i = 0; i < productsfamilys.length; i++) { x.innerHTML += familyMenuTemplate(i, productsfamilys[i]); }
 }
 
 function productRender() {
-    let x = document.getElementById('products'); x.innerHTML = '';
+    let x = document.getElementById('products');
+    x.innerHTML = '';
     for (j = 0; j < productsfamilys.length; j++) {
         x.innerHTML += familyTemplate(j, productsfamilys[j]);
         for (i = 0; i < numberOfProducts; i++) {
@@ -54,10 +56,13 @@ function basketRender() {
 
 function pushToBasket(i) {
     let x = document.getElementById('basketProducts');
-    if (basket[i] == undefined || basket[i] == 0) { pushToBasketHelper(i); x.innerHTML = basketProduct(i, basket[i]) + x.innerHTML; poductsOrder.push(i) }
+    if (basket[i] == undefined || basket[i] == 0) {
+        pushToBasketHelper(i);
+        x.innerHTML = basketProduct(i, basket[i]) + x.innerHTML; poductsOrder.push(i)
+    }
     else {
         basket[i]++;
-        document.getElementById('productCounterId' + i).innerHTML = basket[i]
+        document.getElementById('productCounterId' + i).innerHTML = basket[i];
     };
     document.getElementById('productMainCounterId' + i).innerHTML = basket[i];
     document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i); basketPriceSumm();
@@ -70,54 +75,64 @@ function pushToBasketHelper(j) {
 
 function removeFromBasket(i) {
     let x = document.getElementById('productCounterId' + i);
-    if (basket[i] == 1) { killBasket(i); document.getElementById('productMainCounterId' + i).innerHTML = '' }
+    if (basket[i] == 1) {
+        killBasket(i);
+        document.getElementById('productMainCounterId' + i).innerHTML = ''
+    }
     else {
-        basket[i] = basket[i] - 1; x.innerHTML = basket[i];
-        document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i); document.getElementById('productMainCounterId' + i).innerHTML = basket[i];
+        basket[i] = basket[i] - 1;
+        x.innerHTML = basket[i];
+        document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i);
+        document.getElementById('productMainCounterId' + i).innerHTML = basket[i];
     };
-    basketPriceSumm()
-    basketRender()
+    basketPriceSumm();
+    basketRender();
 }
 
 function killBasket(i) {
     let x = document.getElementById('myBasketProductId' + i);
-    basket[i] = 0; x.remove(); poductsOrder.indexOf(i) > -1 ? poductsOrder.splice(poductsOrder.indexOf(i), 1) : nothing;
+    basket[i] = 0;
+    x.remove();
+    poductsOrder.indexOf(i) > -1 ? poductsOrder.splice(poductsOrder.indexOf(i), 1) : nothing;
     basketPriceSumm(); priceCalculation(); document.getElementById('productMainCounterId' + i).innerHTML = ''
 }
 
 function productPriceSumm(i) {
-    x = basket[i] * db[i].pirce
-    return (getPrice(x) + '€')
+    x = basket[i] * db[i].pirce;
+    return (getPrice(x) + '€');
 }
 
 function basketPriceSumm() {
     let x = 0;
-    for (i = 0; i < basket.length; i++) { x += (basket[i] != undefined ? basket[i] : 0) * db[i].pirce }
-    cost = x
+    for (i = 0; i < basket.length; i++) { x += (basket[i] != undefined ? basket[i] : 0) * db[i].pirce };
+    cost = x;
     document.getElementById('basketPriceId').innerHTML = getPrice(x) + '€';
-    priceCalculation()
+    priceCalculation();
 }
 
 function priceCalculation() {
-    let x = document.getElementById('whoolCost')
+    let x = document.getElementById('whoolCost');
     basket.length > 0 ? (
         document.getElementById('checkboxId').checked ? (
             x.innerHTML = getPrice(cost) + '€') :
             x.innerHTML = cost > 0 ? volumeDiscount() : '0,00€') : x.innerHTML = '0,00€';
-    if (justBasket > 0) { document.getElementById('myFooter').innerHTML = miniBasketBottom() }
+    if (justBasket > 0) { document.getElementById('myFooter').innerHTML = miniBasketBottom() };
 }
 
 function volumeDiscount() {
     let x;
     if (cost >= 50) {
-        document.getElementById('discount').style.display = 'none'; x = getPrice(cost) + '€';
-    } else { document.getElementById('discount').style.display = ''; x = getPrice(7.8 + cost) + '€' };
+        document.getElementById('discount').style.display = 'none';
+        x = getPrice(cost) + '€';
+    } else {
+        document.getElementById('discount').style.display = '';
+        x = getPrice(7.8 + cost) + '€'
+    };
     return x
 }
 
-function basketToggle() {
-    document.getElementById('basketProducts').classList.toggle('displayNone')
-}
+function basketToggle() { document.getElementById('basketProducts').classList.toggle('displayNone') }
+
 function basketBottonOn() {
     if (myCurrentModus == 0) { normal() } else { }
     if (myCurrentModus == 1) {
@@ -126,24 +141,24 @@ function basketBottonOn() {
         document.getElementById('miniBasketBottomId').classList.toggle('displayNone');
         justBasket = justBasket * (-1);
         console.log(justBasket);
-        console.log(document.getElementById('basketSideId').offsetHeight)
+        console.log(document.getElementById('basketSideId').offsetHeight);
     } else { }
 }
-
 
 function myOrder() {
     if (poductsOrder.length > 0) {
         basket.length = 0;
-        poductsOrder.length = 0; priceCalculation(); basketPriceSumm(); mainCounterReset();
-        document.getElementById('basketProducts').innerHTML = ''; document.getElementById('oderDoneImage').style.display = "block"
-        document.getElementById('basketSideId').style.height = '100vh'
-    } else {
-        document.getElementById('oderDoneImage').style.display = "none"
-    };
-    console.log(document.getElementById('myBody').offsetHeight)
-
+        poductsOrder.length = 0;
+        priceCalculation();
+        basketPriceSumm();
+        mainCounterReset();
+        document.getElementById('basketProducts').innerHTML = '';
+        document.getElementById('oderDoneImage').style.display = "block"
+        document.getElementById('basketSideId').style.height = '100vh';
+    } else { document.getElementById('oderDoneImage').style.display = "none" };
+    console.log(document.getElementById('myBody').offsetHeight);
+    document.getElementById('myFooter').innerHTML = miniBasketBottom();
 }
-
 
 function mainCounterReset() {
     for (j = 0; j < productsfamilys.length; j++) {
@@ -154,4 +169,13 @@ function mainCounterReset() {
             }
         }
     }
+}
+
+function switchButton() {
+    document.getElementById('callBasket').classList.toggle('displayNone')
+    document.getElementById('callShop').classList.toggle('displayNone')
+}
+
+function miniBasketBottomDesamble() {
+    document.getElementById('miniBasketBottomId').classList.add('displayNone')
 }

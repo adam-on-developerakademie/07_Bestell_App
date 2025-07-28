@@ -92,6 +92,11 @@ footer {
         height: auto;
     }
 
+/*     #basketBottom{
+        margin-top: auto;
+    }
+ */
+
     .miniBasketBottom {
         display: flex;
         flex-direction: column;
@@ -103,7 +108,7 @@ footer {
     .fullSpace3 {
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
     }
 
     .fullSpace2 {
