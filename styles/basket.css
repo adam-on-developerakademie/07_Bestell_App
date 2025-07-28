@@ -5,7 +5,6 @@
     height: auto;
     width: 300px;
     margin-left: 5px;
-
 }
 
 @media (min-width: 700px) {
@@ -20,45 +19,15 @@
         display: none;
     }
 }
-/* 
-@media (max-width: 700px) {
-    #basketSide {
-      /*  display: none; 
-    }
-
-    .miniBasketBottom{
-        display: flex;
-        flex-direction: column;
-    }  
-}
-
-#basketBottom {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    width: 300px;
-    margin-left: 5px;
-}
-
-@media (max-width: 700px) {
-    #basketBottom {
-        width: 100%;
-        margin-left: 0
-    }
-}
- */
 
 #basketButton:hover {
     cursor: pointer;
     box-shadow: rgb(229, 229, 229) 0px 50px 100px -20px, rgb(255, 255, 255) 0px 30px 60px -30px, rgb(255, 255, 255) 6px -2px 6px 6px inset;
 }
 
-
 .myBasketProduct {
     display: flex;
     justify-content: space-between;
-
     align-items: center;
     padding: 5px;
     padding-left: 10px;
@@ -70,7 +39,6 @@
 }
 
 .productWithCouter {
-
     display: flex;
     justify-content: baseline;
     flex-direction: column;

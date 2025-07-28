@@ -69,8 +69,12 @@ function pushToBasketHelper(j) {
 }
 
 function removeFromBasket(i) {
-    let x = document.getElementById('productCounterId' + i); if (basket[i] == 1) { killBasket(i); document.getElementById('productMainCounterId' + i).innerHTML = '' }
-    else { basket[i] = basket[i] - 1; x.innerHTML = basket[i]; document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i); document.getElementById('productMainCounterId' + i).innerHTML = basket[i]; };
+    let x = document.getElementById('productCounterId' + i);
+    if (basket[i] == 1) { killBasket(i); document.getElementById('productMainCounterId' + i).innerHTML = '' }
+    else {
+        basket[i] = basket[i] - 1; x.innerHTML = basket[i];
+        document.getElementById('priceSummId' + i).innerHTML = productPriceSumm(i); document.getElementById('productMainCounterId' + i).innerHTML = basket[i];
+    };
     basketPriceSumm()
     basketRender()
 }
@@ -101,7 +105,6 @@ function priceCalculation() {
             x.innerHTML = getPrice(cost) + '€') :
             x.innerHTML = cost > 0 ? volumeDiscount() : '0,00€') : x.innerHTML = '0,00€';
     if (justBasket > 0) { document.getElementById('myFooter').innerHTML = miniBasketBottom() }
-
 }
 
 function volumeDiscount() {

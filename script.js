@@ -14,8 +14,6 @@ function normal() {
         document.getElementById('myMain').classList.remove('displayNone');
         console.log(myCurrentModus)
         priceCalculation();
-
-
     }
 };
 
@@ -29,7 +27,6 @@ function small() {
         document.getElementById('basketSideId').classList.add('displayNone')
         console.log(myCurrentModus)
         priceCalculation();
-
     }
 };
 

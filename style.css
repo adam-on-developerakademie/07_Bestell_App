@@ -31,7 +31,6 @@ body {
     }
 }
 
-
 .myBody {
     display: flex;
     max-width: 1920px;
@@ -132,7 +131,6 @@ footer {
     justify-content: center;
     margin-right: 50px;
 }
-
 
 .footerText {
     font-family: Birthstone-Regular;
