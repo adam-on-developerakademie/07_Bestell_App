@@ -12,11 +12,11 @@
     <link rel="shortcut icon" href="./assets/icons/Favicon/favicon.ico" type="image/x-icon">
 </head>
 
-<body id="myBody" onload="init()">
+<body id="myBody" onload="init()" onclick="">
     <header id="header">
         <div class="header">
             <img id="headerImage" src="./assets/icons/Logo/Logo.png" alt="">
-            <div class="myHtmlHamburger" onclick="basketBottonOn()">
+            <div class="myHtmlHamburger">
                 <div class="burger"></div>
                 <div class="burger"></div>
                 <div class="burger"></div>
@@ -26,7 +26,7 @@
     </header>
 
     <div class="myBody">
-        <div id="oderDone"><img id="oderDoneImage" onclick="myOrder(), miniBasketBottomDesamble(),small()  " src="./assets/icons/well_done.png" alt=""></div>
+        <div id="oderDone"><img id="oderDoneImage" onclick="myOrder()  " src="./assets/icons/well_done.png" alt=""></div>
         <main id="myMain">
             <div class="mainBackground">
                 <div id="mainHeader">
@@ -73,8 +73,8 @@
                     <p></p>
                 </div>
                 <div id="basketBottom" class="fullSpace2">
-                    <h2 id="callShop" class="displayNone" onclick="basketBottonOn(), switchButton()">Shop</h2>
-                    <h2 id="order" onclick="myOrder(), miniBasketBottomDesamble() ">Bestellen</h2>
+                    <h2 id="callShop" class="displayNone" onclick="callShopOn()">Shop</h2>
+                    <h2 id="order" onclick="myOrder()">Bestellen</h2>
                 </div>
             </div>
         </section>
@@ -86,7 +86,7 @@
                 <h3 id="whoolCost">0,00€</h3>
             </div>
             <div class="fullSpace3">
-                <h2 id="callBasket" onclick="basketBottonOn()">Warenkorb</h2>
+                <h2 id="callBasket" onclick="callBasketOn()">Warenkorb</h2>
                 <h2 id="order" onclick="myOrder()">Bestellen</h2>
 
             </div>

@@ -111,12 +111,12 @@ function basketPriceSumm() {
 }
 
 function priceCalculation() {
-    let x = document.getElementById('whoolCost');
+    let x = document.getElementById('whoolCost'); currentClasses=document.getElementById('miniBasketBottomId').classList
     basket.length > 0 ? (
         document.getElementById('checkboxId').checked ? (
             x.innerHTML = getPrice(cost) + '€') :
             x.innerHTML = cost > 0 ? volumeDiscount() : '0,00€') : x.innerHTML = '0,00€';
-    if (justBasket > 0) { document.getElementById('myFooter').innerHTML = miniBasketBottom() };
+    if (justBasket > 0) { document.getElementById('myFooter').innerHTML = miniBasketBottom(', '+currentClasses[1]) };
 }
 
 function volumeDiscount() {
@@ -131,19 +131,6 @@ function volumeDiscount() {
     return x
 }
 
-function basketToggle() { document.getElementById('basketProducts').classList.toggle('displayNone') }
-
-function basketBottonOn() {
-    if (myCurrentModus == 0) { normal() } else { }
-    if (myCurrentModus == 1) {
-        document.getElementById('basketSideId').classList.toggle('displayNone');
-        document.getElementById('myMain').classList.toggle('displayNone');
-        document.getElementById('miniBasketBottomId').classList.toggle('displayNone');
-        justBasket = justBasket * (-1);
-        console.log(justBasket);
-        console.log(document.getElementById('basketSideId').offsetHeight);
-    } else { }
-}
 
 function myOrder() {
     if (poductsOrder.length > 0) {
@@ -153,16 +140,17 @@ function myOrder() {
         basketPriceSumm();
         mainCounterReset();
         letsDoThis();
-    } else { document.getElementById('oderDoneImage').style.display = "none" };
-    console.log(document.getElementById('myBody').offsetHeight);
+    } else { buyIsDone() };
     document.getElementById('myFooter').innerHTML = miniBasketBottom();
 }
 function letsDoThis() {
     document.getElementById('basketProducts').innerHTML = '';
     document.getElementById('oderDoneImage').style.display = "block"
-    document.getElementById('basketSideId').style.height = '100vh';
-    document.getElementById('checkboxId').checked=false
+    document.getElementById('basketSideId').style.marginBottom = '70vh';
+    document.getElementById('checkboxId').checked = false
 }
+
+function buyIsDone() { document.getElementById('oderDoneImage').style.display = "none" }
 
 function mainCounterReset() {
     for (j = 0; j < productsfamilys.length; j++) {
@@ -175,11 +163,46 @@ function mainCounterReset() {
     }
 }
 
-function switchButton() {
-    document.getElementById('callBasket').classList.toggle('displayNone')
-    document.getElementById('callShop').classList.toggle('displayNone')
+
+
+function callBasketOn() {
+    document.getElementById('miniBasketBottomId').classList.add('displayNone');
+    document.getElementById('callBasket').classList.add('displayNone')
+    document.getElementById('myMain').classList.add('displayNone');
+    document.getElementById('callShop').classList.add('buttonsRound')
+    document.getElementById('order').classList.add('buttonsRound')
+    document.getElementById('callShop').classList.remove('displayNone')
+    document.getElementById('basketSideId').classList.remove('displayNone');
+
+
+
+}
+
+function callShopOn() {
+    document.getElementById('callShop').classList.add('displayNone')
+    document.getElementById('basketSideId').classList.add('displayNone');
+    document.getElementById('callBasket').classList.remove('displayNone')
+    document.getElementById('miniBasketBottomId').classList.remove('displayNone');
+    document.getElementById('myMain').classList.remove('displayNone');
 }
 
 function miniBasketBottomDesamble() {
     document.getElementById('miniBasketBottomId').classList.add('displayNone')
+}
+
+function miniBasketBottomEnable() {
+    document.getElementById('myFooter').innerHTML = miniBasketBottom()
+    document.getElementById('miniBasketBottomId').classList.remove('displayNone')
+
+}
+function basketToggle() { document.getElementById('basketProducts').classList.toggle('displayNone') }  //OK
+
+function basketBottonOn() {
+    if (myCurrentModus == 0) { normal() } else { }
+    if (myCurrentModus == 1) {
+        document.getElementById('basketSideId').classList.toggle('displayNone');
+        document.getElementById('myMain').classList.toggle('displayNone');
+        document.getElementById('miniBasketBottomId').classList.toggle('displayNone');
+        justBasket = justBasket * (-1);
+    } else { }
 }

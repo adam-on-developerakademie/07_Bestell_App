@@ -52,16 +52,16 @@ function basketProduct(i, n) {
 
 
 function miniBasketBottom() {
-    x = document.getElementById('whoolCost').innerHTML;
+    x = document.getElementById('whoolCost').innerHTML; currentClass=document.getElementById('miniBasketBottomId').classList;
     return `
 
-<div id="miniBasketBottomId" class="miniBasketBottom">
+<div id="miniBasketBottomId" class="miniBasketBottom ${currentClass[1] +' '+currentClass[2]}">
     <div class="fullSpace">
         <h3>Gesammt:</h3>
         <h3 id="whoolCost">${x}</h3>
     </div>
     <div class="fullSpace3">
-        <h2 id="callBasket" onclick="switchButton(), basketBottonOn()">Warenkorb</h2>
+        <h2 id="callBasket" onclick="callBasketOn()">Warenkorb</h2>
         <h2 id="order" onclick="myOrder()">Bestellen</h2>
     </div>
 </div>
