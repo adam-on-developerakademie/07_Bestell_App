@@ -92,11 +92,6 @@ footer {
         height: auto;
     }
 
-/*     #basketBottom{
-        margin-top: auto;
-    }
- */
-
     .miniBasketBottom {
         display: flex;
         flex-direction: column;
@@ -116,7 +111,6 @@ footer {
         display: flex;
         justify-content: center;
         padding-top: 15px;
-
     }
 }
 
@@ -127,6 +121,7 @@ footer {
 }
 
 #footerText {
+    max-width: 1920px;
     background-color: #ff8000;
     height: 60px;
     width: 100%;
