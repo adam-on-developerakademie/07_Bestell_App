@@ -1,84 +1,87 @@
 .products {
-    margin-left: 5px;
-    margin-right: 0.01px;
-    height: auto;
-    overflow: hidden;
+  margin-left: 5px;
+  margin-right: 0.01px;
+  height: auto;
+  overflow: hidden;
 }
 
 #products {
-    display: flex;
-    flex-direction: column;
-    height: auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
 
 .myProduct {
-    display: flex;
-    align-items: top;
-    height: 100px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    width: 100%;
-    background-color: white;
-    box-shadow: rgba(10, 37, 64, 0.35) 1px 0px 2px 1px inset;
+  display: flex;
+  align-items: top;
+  height: 100px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(10, 37, 64, 0.35) 1px 0px 2px 1px inset;
 }
 
 .productBorder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 100%;
-    background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+  background-color: transparent;
 }
 
 .productContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 0;
-    padding-left: 10px;
-    height: 100%;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+  padding-left: 10px;
+  height: 100%;
+  width: 100%;
 }
 
 .productName {
-    font-weight: bold;
-    font-size: 20px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .productPrice {
-    font-size: large;
-    color: #ff8000;
+  font-size: large;
+  color: #ff8000;
 }
 
 .productAdd {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2px;
-    padding: 10px;
-    font-size: 48px;
-    font-weight: bolder;
-    height: 30px;
-    width: 30px;
-    border: 1px solid black;
-    color: #ff8000;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+  padding: 10px;
+  font-size: 48px;
+  font-weight: bolder;
+  height: 30px;
+  width: 30px;
+  border: 1px solid black;
+  color: #ff8000;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .productAdd:hover {
-    background-color: rgba(13, 255, 0, 0.068);
-    cursor: pointer;
+  background-color: rgba(13, 255, 0, 0.068);
+  cursor: pointer;
 }
 
 .productsFamily:hover {
-    cursor: pointer;
-    box-shadow: rgb(229, 229, 229) 0px 50px 100px -20px, rgb(255, 255, 255) 0px 30px 60px -30px, rgb(255, 255, 255) 6px -2px 6px 6px inset;
+  cursor: pointer;
+  box-shadow: rgb(229, 229, 229) 0px 50px 100px -20px,
+    rgb(255, 255, 255) 0px 30px 60px -30px,
+    rgb(255, 255, 255) 6px -2px 6px 6px inset;
 }
 
 .unitAndPrice {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }

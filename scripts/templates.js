@@ -1,5 +1,5 @@
 function productTemplate(i) {
-    let x = `
+  let x = `
 
 <div id="myProductId${i}" class="myProduct">
     <div class="productContent">
@@ -14,24 +14,26 @@ function productTemplate(i) {
         <div id="productAddId${i}" class="productAdd" onclick="pushToBasket(${i})">+</div>
         <div id="productMainCounterId${i}" class="productCounter"></div>
     </div>
-</div>`
-    return (x)
+</div>`;
+  return x;
 }
 
 function familyMenuTemplate(i, value) {
-    let x = `
-                <h2 id="ProductsFamilyM${i}" class="productsFamily" onclick="window.location.href='#ProductsFamily${i}'">${value}</h2>`
-    return (x)
+  let x = `
+                <h2 id="ProductsFamilyM${i}" class="productsFamily" onclick="window.location.href='#ProductsFamily${i}'">${value}</h2>`;
+  return x;
 }
 
 function familyTemplate(i, value) {
-    let x = `
-                <h2 id="ProductsFamily${i}" class="productsFamily" onclick="window.location.href='#header'">${value}</h2>`
-    return (x)
+  let x = `
+                <h2 id="ProductsFamily${i}" class="productsFamily" onclick="window.location.href='#header'">${value}</h2>`;
+  return x;
 }
 
 function basketProduct(i, n) {
-    let x = i > -1 ? `
+  let x =
+    i > -1
+      ? `
 <div id="myBasketProductId${i}" class="myBasketProduct">
     <div class="productWithCouter">
         <p class="productName">${getClean(db[i].product)}</p>
@@ -46,16 +48,19 @@ function basketProduct(i, n) {
         <div class="deleteAll" onclick="killBasket(${i})"></div>
         <div id="priceSummId${i}" class="priceSumm">${productPriceSumm(i)}</div>
     </div>
-</div>`: ``;
-    return (x);
+</div>`
+      : ``;
+  return x;
 }
 
-
 function miniBasketBottom() {
-    x = document.getElementById('whoolCost').innerHTML; currentClass=document.getElementById('miniBasketBottomId').classList;
-    return `
+  x = document.getElementById("whoolCost").innerHTML;
+  currentClass = document.getElementById("miniBasketBottomId").classList;
+  return `
 
-<div id="miniBasketBottomId" class="miniBasketBottom ${currentClass[1] +' '+currentClass[2]}">
+<div id="miniBasketBottomId" class="miniBasketBottom ${
+    currentClass[1] + " " + currentClass[2]
+  }">
     <div class="fullSpace">
         <h3>Gesammt:</h3>
         <h3 id="whoolCost">${x}</h3>
@@ -68,4 +73,5 @@ function miniBasketBottom() {
 <div id="footerText">
     <p class="footerText">© design by Adam</p>
 </div>
-`}
+`;
+}

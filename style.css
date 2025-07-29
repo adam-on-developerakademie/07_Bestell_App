@@ -1,143 +1,142 @@
 @font-face {
-    font-family: "Birthstone-Regular";
-    src: url(./assets/fonts/Birthstone/Birthstone-Regular.ttf);
+  font-family: "Birthstone-Regular";
+  src: url(./assets/fonts/Birthstone/Birthstone-Regular.ttf);
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    scroll-behavior: smooth;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 0;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #header {
-    background-color: #ff8000;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #ff8000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 700px) {
-    #header {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-    }
+  #header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
 }
 
 .myBody {
-    display: flex;
-    max-width: 1920px;
-    justify-content: center;
-    width: 100%;
-    height: auto;
+  display: flex;
+  max-width: 1920px;
+  justify-content: center;
+  width: 100%;
+  height: auto;
 }
 
 .header {
-    max-width: 1920px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
 }
 
 #headerImage {
-    height: 50px;
-    margin-left: 20px;
+  height: 50px;
+  margin-left: 20px;
 }
 
 .myHtmlHamburger {
-    margin-right: 20px;
-    height: 40px;
-    width: 40px;
-    margin-left: auto;
-    border: 5px solid transparent;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+  margin-right: 20px;
+  height: 40px;
+  width: 40px;
+  margin-left: auto;
+  border: 5px solid transparent;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .burger {
-    height: 10%;
-    width: 80%;
-    background-color: whitesmoke;
-    border: 1px solid transparent;
-    border-radius: 10%;
+  height: 10%;
+  width: 80%;
+  background-color: whitesmoke;
+  border: 1px solid transparent;
+  border-radius: 10%;
 }
 
 footer {
-    background-color: #ff8000;
-    height: 60px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
+  background-color: #ff8000;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
 }
 
 @media (max-width: 700px) {
-    footer {
-        height: auto;
-    }
+  footer {
+    height: auto;
+  }
 
-    .miniBasketBottom {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        background-color: white;
-    }
+  .miniBasketBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+  }
 
-    .fullSpace3 {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+  .fullSpace3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-    .fullSpace2 {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding-top: 15px;
-    }
+  .fullSpace2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+  }
 }
 
 #myFooter {
-    position: -webkit-sticky;
-    position: sticky;
-    bottom: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
 }
 
 #footerText {
-    max-width: 1920px;
-    background-color: #ff8000;
-    height: 60px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    justify-content: center;
-    margin-right: 50px;
+  max-width: 1920px;
+  background-color: #ff8000;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  margin-right: 50px;
 }
 
 .footerText {
-    font-family: Birthstone-Regular;
-    font-size: 20px;
-    color: antiquewhite;
+  font-family: Birthstone-Regular;
+  font-size: 20px;
+  color: antiquewhite;
 }
 
 .displayNone {
-    display: none !important;
+  display: none !important;
 }
