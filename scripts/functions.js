@@ -152,12 +152,16 @@ function myOrder() {
         priceCalculation();
         basketPriceSumm();
         mainCounterReset();
-        document.getElementById('basketProducts').innerHTML = '';
-        document.getElementById('oderDoneImage').style.display = "block"
-        document.getElementById('basketSideId').style.height = '100vh';
+        letsDoThis();
     } else { document.getElementById('oderDoneImage').style.display = "none" };
     console.log(document.getElementById('myBody').offsetHeight);
     document.getElementById('myFooter').innerHTML = miniBasketBottom();
+}
+function letsDoThis() {
+    document.getElementById('basketProducts').innerHTML = '';
+    document.getElementById('oderDoneImage').style.display = "block"
+    document.getElementById('basketSideId').style.height = '100vh';
+    document.getElementById('checkboxId').checked=false
 }
 
 function mainCounterReset() {
